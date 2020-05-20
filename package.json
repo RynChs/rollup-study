@@ -1,11 +1,12 @@
 {
   "name": "rollup-study",
   "version": "1.0.0",
-  "description": "rollup",
+  "description": "rollup, webpack",
   "main": "index.js",
   "scripts": {
+    "build:rollup-app": "rollup --config ./rollup/rollup.config.js",
     "dev:webpack-app": "webpack-dev-server --config ./webpack/webpack.dev.js",
-    "dev:rollup-app": ""
+    "build:webpack-app": "webpack --config ./webpack/webpack.prod.js"
   },
   "author": "RynCh",
   "license": "ISC",
@@ -16,6 +17,10 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-typescript": "^4.1.1",
+    "chalk": "^4.0.0",
     "html-webpack-plugin": "^4.2.0",
     "rollup": "^2.7.2",
     "speed-measure-webpack-plugin": "^1.3.3",
@@ -25,6 +30,7 @@
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.7.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   }
 }
